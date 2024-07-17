@@ -17,20 +17,20 @@ function getData() {
     axios.get('https://api.mirafgan.me/neptun/catalog')
         .then(res => {
             DATA = res.data
-            console.log(DATA)
             showCategory(DATA)
         })
 }
 getData()
 
-function sideOpen(){
+function sideOpen() {
     sidebar.classList.toggle('sidebar-active')
 }
 
 function showCategory(data) {
     const leftmenulists = document.getElementById("left-menu-lists")
+
     data.forEach(item => {
-        let submenuitems = item.submenu.map(element => `<li><a href="#" class="menu-links">${element.name}</a></li>` ).join('')
+        let submenuitems = item.submenu.map(element => `<li><a href="#" class="menu-links">${element.name}</a></li>`).join('')
 
         leftmenulists.innerHTML += `<li>
                                         <div class="cat-icon">
@@ -42,7 +42,7 @@ function showCategory(data) {
                                                 ${submenuitems}
                                             </ul>
                                         </div>
-                                    </li>` 
+                                    </li>`
     });
 }
 
