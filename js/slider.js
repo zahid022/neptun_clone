@@ -1,4 +1,5 @@
-$(() => {
+function go() {
+
     const image = ['slider-image1.webp', 'slider-image2.webp', 'slider-image3.webp']
     const path = '../img/'
     let x = 0
@@ -45,4 +46,7 @@ $(() => {
         .click(function (e) {
             change(-1)
         })
-})
+
+}
+
+export default go

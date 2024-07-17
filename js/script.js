@@ -1,3 +1,5 @@
+import go from "./slider.js"
+
 let DATA = null
 
 const ajax = new XMLHttpRequest()
@@ -8,7 +10,10 @@ loadPage(location.hash.slice(1) || 'main')
 function loadPage(page) {
     ajax.open('GET', `content/${page}.html`)
     ajax.send()
-    ajax.onload = () => main.innerHTML = ajax.responseText
+    ajax.onload = () => {
+        main.innerHTML = ajax.responseText
+        go()
+    }
 }
 
 const sidebar = document.getElementById("sidebar")
