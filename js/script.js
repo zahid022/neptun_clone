@@ -2,20 +2,6 @@ import go from "./slider.js"
 
 let DATA = null
 
-const ajax = new XMLHttpRequest()
-const main = document.querySelector("main")
-
-loadPage(location.hash.slice(1) || 'main')
-
-function loadPage(page) {
-    ajax.open('GET', `content/${page}.html`)
-    ajax.send()
-    ajax.onload = () => {
-        main.innerHTML = ajax.responseText
-        go()
-    }
-}
-
 const sidebar = document.getElementById("sidebar")
 
 function getData() {
@@ -23,6 +9,7 @@ function getData() {
         .then(res => {
             DATA = res.data
             showCategory(DATA)
+            go()
         })
 }
 getData()

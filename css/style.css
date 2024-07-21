@@ -391,6 +391,7 @@ footer {
 #footer-title{
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 #title-left>li, #title-right>li{
@@ -440,6 +441,12 @@ footer {
     color: #fff;
     font-size: 11px;
     font-weight: 600;
+}
+
+#footer-bottom p{
+    margin: 40px 0 0 0;
+    color: #fff;
+    text-align: center;
 }
 
 @media only screen and (min-width: 576px) {

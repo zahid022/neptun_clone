@@ -207,7 +207,7 @@
                     </div>
                 </div>
                 <ul id="nav-menu">
-                    <li class="nav-list"><a class="nav-links menu-links" href="#">Ana səhifə</a></li>
+                    <li class="nav-list"><a class="nav-links menu-links" onclick="loadPage('main')">Ana səhifə</a></li>
                     <li class="nav-list"><a class="nav-links menu-links" href="#">Haqqımızda</a></li>
                     <li class="nav-list"><a class="nav-links menu-links" href="#">Aksiyalar</a></li>
                     <li class="nav-list"><a class="nav-links menu-links" href="#">Supermarketlər</a></li>
@@ -255,7 +255,60 @@
     <!-- ********************** sidebar end ****************** -->
 
     <!-- ***************** main start ****************** -->
-    <main></main>
+    <main>
+        <div class="container">
+            <section>
+                <div id="hero-section">
+                    <div id="main-left-menu">
+                        <ul id="left-menu-lists"></ul>
+                    </div>
+                    <div id="main-hero-right">
+                        <div id="hero-slider">
+                            <div class="slider-container">
+                                <div class="slider-item"></div>
+                                <div class="slider-btn" id="slider-next-btn"><i class="fas fa-chevron-right"></i></div>
+                                <div class="slider-btn" id="slider-prev-btn"><i class="fas fa-chevron-left"></i></div>
+                            </div>
+                            <div class="slide-pag">
+                                <div class="slider-pagination-item" data-slide="0"></div>
+                                <div class="slider-pagination-item" data-slide="1"></div>
+                                <div class="slider-pagination-item" data-slide="2"></div>
+                            </div>
+                        </div>
+                        <div id="hero-gallery">
+                            <div id="gallery-image1" class="gallery-images">
+                                <div>
+                                    <img src="img/galery1.png" alt="Gallery Image" />
+                                    <div class="gal-img-bot">
+                                        <p class="go-links">50 azn 50 bonus</p>
+                                        <i class="fas fa-arrow-right"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="gallery-image2" class="gallery-images">
+                                <div>
+                                    <img src="img/galery-image2.jpg" alt="Gallery Image" />
+                                    <div class="gal-img-bot">
+                                        <p class="go-links">Neptunda Dadlı Endirimlər!</p>
+                                        <i class="fas fa-arrow-right"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="gallery-image3" class="gallery-images">
+                                <div>
+                                    <img src="img/gallery-image3.png" alt="Gallery Image" />
+                                    <div class="gal-img-bot">
+                                        <p class="go-links">Həftəsonu Endirimləri Neptunda!</p>
+                                        <i class="fas fa-arrow-right"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
     <!-- ***************** main end ****************** -->
 
     <!-- ***************** footer start ****************** -->
@@ -308,6 +361,9 @@
                     </li>
                 </ul>
             </div>
+            <div id="footer-bottom">
+                <p>Copyright &copy; 2024</p>
+            </div>
         </div>
     </footer>
 
@@ -321,7 +377,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <script type="module" src="js/script.js"></script>
-    <script type="module" async src="js/slider.js"></script>
+    <script type="module" src="js/slider.js"></script>
 </body>
 
 </html>
